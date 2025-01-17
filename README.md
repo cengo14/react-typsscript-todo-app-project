@@ -1,50 +1,91 @@
-# React + TypeScript + Vite
+# Todo Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, React ve TypeScript ile oluşturulmuş ve Bootstrap ile stillendirilmiş bir **Todo Uygulamasıdır**. Kullanıcıların notlarını oluşturup yönetebileceği, görsellik açısından zengin bir uygulamadır.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Not Yönetimi**:
+  - Başlık, konu (Markdown desteği ile), ve etiketlerle not oluşturma.
+  - Notları düzenleme ve silme.
+- **Arama ve Filtreleme**:
+  - Notları başlığa göre arama.
+  - Etikete göre listeleme.
+- **Markdown Desteği**:
+  - [react-markdown](https://github.com/remarkjs/react-markdown) ile zengin metin düzenleme.
+- **Seçim ve Animasyonlar**:
+  - [react-select](https://react-select.com/) ile etiket seçimi.
+  - [framer-motion](https://www.framer.com/motion/) ile kullanıcı dostu animasyonlar.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Kurulum
 
-- Configure the top-level `parserOptions` property like this:
+Projeyi yerel ortamınıza klonladıktan sonra aşağıdaki adımları izleyin:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Depoyu Klonlayın
+
+```bash
+git clone https://github.com/cengo14/react-typsscript-todo-app-project.git
+cd react-typsscript-todo-app-project
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Bağımlılıkları Yükleyin
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Geliştirme Sunucusunu Başlatın
+
+```bash
+npm run dev
+```
+
+Tarayıcınızda projeyi görmek için [http://localhost:5173](http://localhost:5173) adresini ziyaret edin.
+
+---
+
+## Kullanılan Teknolojiler
+
+- **React** ve **TypeScript**
+- **Bootstrap**: Şık ve duyarlı tasarımlar için.
+- **react-markdown**: Markdown desteği için.
+- **react-select**: Etiket seçimi için kullanıcı dostu bir bileşen.
+- **framer-motion**: Akıcı ve etkileyici animasyonlar.
+
+---
+
+## Scriptler
+
+Projede kullanabileceğiniz NPM scriptleri:
+
+- **`npm run dev`**: Geliştirme sunucusunu başlatır.
+- **`npm run build`**: Üretim için optimize edilmiş dosyaları oluşturur.
+- **`npm run preview`**: Üretim çıktısını yerel olarak önizler.
+
+---
+
+## Katkıda Bulunma
+
+1. Bu depoyu fork'layın.
+2. Yeni bir dal oluşturun: `git checkout -b feature-isim`
+3. Değişikliklerinizi yapın ve commitleyin: `git commit -m 'Yeni özellik eklendi'`
+4. Dalınıza push yapın: `git push origin feature-isim`
+5. Bir **Pull Request** açın.
+
+---
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+---
+
+## Ekran Görüntüleri
+
+Uygulamanın ekran görüntülerini buraya ekleyebilirsiniz:
+
+![Uygulama Görünümü](./screenshots/ss1.png)
+![Uygulama Görünümü](./screenshots/ss2.png)
+![Uygulama Görünümü](./screenshots/ss3.png)
+![Uygulama Görünümü](./screenshots/ss4.png)
